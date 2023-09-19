@@ -1,7 +1,10 @@
 import { BrowserWindow, BrowserWindowConstructorOptions, Size, WebContents } from 'electron';
 import { EventEmitter } from 'events';
 
-export declare type GameProcessInfo = {
+export * from './game-list'
+export * from './gep-supported-games'
+
+export type GameProcessInfo = {
   pid?: number;
 
   fullPath: string;
@@ -13,7 +16,7 @@ export declare type GameProcessInfo = {
   isElevated?: boolean;
 }
 
-export declare type GameInfo = {
+export type GameInfo = {
   id: number;
 
   classId: number;
@@ -44,11 +47,11 @@ export const enum PassthroughType {
   /**
    *  Window will handle input and block from game (Default)
    */
-  NoPassThrough = 0,
+  NoPassThrough,
   /**
    *  window will not handle any input
    */
-  PassThrough,
+  PassThrough
 }
 
 /**
@@ -68,7 +71,7 @@ export interface OverlayOptions {
 
 export interface OverlayWindowOptions
   extends BrowserWindowConstructorOptions,
-    OverlayOptions {
+  OverlayOptions {
   /**
    * unique name (id)
    */
@@ -120,14 +123,14 @@ export interface GameWindowInfo {
 }
 
 export interface ActiveGameInfo {
-  gameInfo : GameInfo,
+  gameInfo: GameInfo,
   gameWindowInfo: GameWindowInfo;
 }
 
-export declare type GameWindowUpdateReason = undefined | 'resized' | 'focus';
-export declare type HotkeyState = 'pressed' | 'released';
+export type GameWindowUpdateReason = undefined | 'resized' | 'focus';
+export type HotkeyState = 'pressed' | 'released';
 
-export declare type HotkeyCallback = (
+export type HotkeyCallback = (
   hotKey: IOverlayHotkey,
   state: HotkeyState
 ) => void;
