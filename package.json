@@ -1,6 +1,6 @@
 {
-  "name": "@overwolf/ow-electron-packages-types",
-  "version": "0.0.3",
+  "name": "antonk777-ow-electron-packages-types",
+  "version": "0.0.4",
   "description": "Type definition file for autocompletion and documentation purposes for ow-electron packages",
   "license": "MIT",
   "main": "index.ts",
@@ -18,6 +18,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/overwolf/ow-electron-packages-types"
+    "url": "https://github.com/antonk777/ow-electron-packages-types"
   }
 }
